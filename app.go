@@ -9,6 +9,7 @@ import (
 	"github.com/prometheus/client_golang/prometheus/promhttp"
 
 	"github.com/tokopedia/gosample/hello"
+	"github.com/tokopedia/gosample/user"
 	"github.com/tokopedia/logging/tracer"
 	"gopkg.in/tokopedia/grace.v1"
 	"gopkg.in/tokopedia/logging.v1"
@@ -32,9 +33,12 @@ func main() {
 	http.Handle("/metrics", promhttp.Handler())
 
 	http.HandleFunc("/hello", hwm.SayHelloWorld)
+	http.HandleFunc("/api/users", user.HandlerGetUserList)
+	http.HandleFunc("/users", user.HandlerUserHtmlPage)
+	http.HandleFunc("/pingcounter", user.HandlerPingCounter)
 	go logging.StatsLog()
 
 	tracer.Init(&tracer.Config{Port: 8700, Enabled: true})
 
-	log.Fatal(grace.Serve(":9000", nil))
+	log.Fatal(grace.Serve(":9002", nil))
 }

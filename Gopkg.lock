@@ -15,13 +15,22 @@
 
 [[projects]]
   branch = "master"
+  name = "github.com/bmizerany/pq"
+  packages = ["."]
+  revision = "da2b95e392c172df0be322eadc19a90b0f771548"
+
+[[projects]]
+  branch = "master"
   name = "github.com/codahale/hdrhistogram"
   packages = ["."]
   revision = "3a0bb77429bd3a61596f5e8a3172445844342120"
 
 [[projects]]
   name = "github.com/gogo/protobuf"
-  packages = ["io","proto"]
+  packages = [
+    "io",
+    "proto"
+  ]
   revision = "342cbe0a04158f6dcb03ca0079991a51a4248c02"
   version = "v0.5"
 
@@ -39,7 +48,11 @@
 
 [[projects]]
   name = "github.com/google/gops"
-  packages = ["agent","internal","signal"]
+  packages = [
+    "agent",
+    "internal",
+    "signal"
+  ]
   revision = "57e77c5c37da1f4e1af49f9d1fe760f146c1579e"
   version = "v0.3.2"
 
@@ -57,13 +70,26 @@
 
 [[projects]]
   branch = "master"
+  name = "github.com/jmoiron/sqlx"
+  packages = [
+    ".",
+    "reflectx"
+  ]
+  revision = "cf35089a197953c69420c8d0cecda90809764b1d"
+
+[[projects]]
+  branch = "master"
   name = "github.com/kardianos/osext"
   packages = ["."]
   revision = "ae77be60afb1dcacde03767a8c37337fad28ac14"
 
 [[projects]]
   name = "github.com/klauspost/compress"
-  packages = ["flate","gzip","zlib"]
+  packages = [
+    "flate",
+    "gzip",
+    "zlib"
+  ]
   revision = "6c8db69c4b49dd4df1fff66996cf556176d0b9bf"
   version = "v1.2.1"
 
@@ -93,19 +119,29 @@
 
 [[projects]]
   name = "github.com/opentracing/basictracer-go"
-  packages = [".","wire"]
+  packages = [
+    ".",
+    "wire"
+  ]
   revision = "1b32af207119a14b1b231d451df3ed04a72efebf"
   version = "v1.0.0"
 
 [[projects]]
   name = "github.com/opentracing/opentracing-go"
-  packages = [".","ext","log"]
+  packages = [
+    ".",
+    "ext",
+    "log"
+  ]
   revision = "1949ddbfd147afd4d964a9f00b24eb291e0e7c38"
   version = "v1.0.2"
 
 [[projects]]
   name = "github.com/prometheus/client_golang"
-  packages = ["prometheus","prometheus/promhttp"]
+  packages = [
+    "prometheus",
+    "prometheus/promhttp"
+  ]
   revision = "c5b7fccd204277076155f10851dad72b76a49317"
   version = "v0.8.0"
 
@@ -118,13 +154,20 @@
 [[projects]]
   branch = "master"
   name = "github.com/prometheus/common"
-  packages = ["expfmt","internal/bitbucket.org/ww/goautoneg","model"]
+  packages = [
+    "expfmt",
+    "internal/bitbucket.org/ww/goautoneg",
+    "model"
+  ]
   revision = "2e54d0b93cba2fd133edc32211dcc32c06ef72ca"
 
 [[projects]]
   branch = "master"
   name = "github.com/prometheus/procfs"
-  packages = [".","xfs"]
+  packages = [
+    ".",
+    "xfs"
+  ]
   revision = "b15cd069a83443be3154b719d0cc9fe8117f09fb"
 
 [[projects]]
@@ -146,8 +189,28 @@
   revision = "28e2f74413285e0dd0ec8aec292aa40530bfa10a"
 
 [[projects]]
+  branch = "master"
+  name = "github.com/tokopedia/sqlt"
+  packages = ["."]
+  revision = "067a01e1f3f321dec43c711f03e18a59a982a0a1"
+
+[[projects]]
   name = "github.com/uber/jaeger-client-go"
-  packages = [".","config","internal/baggage","internal/baggage/remote","internal/spanlog","log","rpcmetrics","thrift-gen/agent","thrift-gen/baggage","thrift-gen/jaeger","thrift-gen/sampling","thrift-gen/zipkincore","utils"]
+  packages = [
+    ".",
+    "config",
+    "internal/baggage",
+    "internal/baggage/remote",
+    "internal/spanlog",
+    "log",
+    "rpcmetrics",
+    "thrift-gen/agent",
+    "thrift-gen/baggage",
+    "thrift-gen/jaeger",
+    "thrift-gen/sampling",
+    "thrift-gen/zipkincore",
+    "utils"
+  ]
   revision = "ff3efa227b65e419701a4f48985379ca106a89e7"
   version = "v2.11.0"
 
@@ -159,7 +222,11 @@
 
 [[projects]]
   name = "github.com/valyala/fasthttp"
-  packages = [".","fasthttputil","reuseport"]
+  packages = [
+    ".",
+    "fasthttputil",
+    "reuseport"
+  ]
   revision = "d42167fd04f636e20b005e9934159e95454233c7"
   version = "v20160617"
 
@@ -171,7 +238,12 @@
 
 [[projects]]
   name = "gopkg.in/gcfg.v1"
-  packages = [".","scanner","token","types"]
+  packages = [
+    ".",
+    "scanner",
+    "token",
+    "types"
+  ]
   revision = "298b7a6a3838f79debfaee8bd3bfb2b8d779e756"
   version = "v1.2.1"
 
@@ -202,7 +274,15 @@
 [[projects]]
   branch = "master"
   name = "sourcegraph.com/sourcegraph/appdash"
-  packages = [".","httptrace","internal/wire","opentracing","sqltrace","traceapp","traceapp/tmpl"]
+  packages = [
+    ".",
+    "httptrace",
+    "internal/wire",
+    "opentracing",
+    "sqltrace",
+    "traceapp",
+    "traceapp/tmpl"
+  ]
   revision = "f9a4336c02542ebbfa01c37949bd7152fb0f659c"
 
 [[projects]]
@@ -214,6 +294,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "f1d7235aed1b34cd28db280a92260ebc16348898b9155bcf0b713839c8625d5b"
+  inputs-digest = "5ebe6432516cd123bcbfc975935d8e7bcbe1aa97ff37ce8b171f90fac85a4d0f"
   solver-name = "gps-cdcl"
   solver-version = 1
